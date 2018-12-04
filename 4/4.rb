@@ -42,4 +42,11 @@ end
 longest_sleep = guard_logs.max_by{|i| i[1].sum}[0]
 longest_minute = guard_logs[longest_sleep].index(guard_logs[longest_sleep].max)
 
+puts longest_sleep, longest_minute
 puts longest_sleep.to_i * longest_minute.to_i
+
+most_frequent = guard_logs.max_by{|i| i[1].max}[0]
+freq_minute = guard_logs[most_frequent].index(guard_logs[most_frequent].max)
+
+puts most_frequent, freq_minute
+puts most_frequent.to_i * freq_minute.to_i
